@@ -10,7 +10,9 @@
 </head>
 
 <body>
-    <div class="alert_box" id="alert"></div>
+    <div class="alert_box" id="alert">
+    </div>
+    <button id="close">x</button>
     <button onclick="warning('아이디를')">버튼1</button>
     <button onclick="warning('비번을')">버튼2</button>
 
@@ -20,6 +22,9 @@
             document.getElementById('alert').innerHTML = text + " 입력 안 하셨어요";
             document.getElementById('alert').style.display = 'block';
         }
+        document.getElementById('close').addEventListener('click', function() {
+            document.getElementById('alert').style.display = 'none';
+        });
     </script>
 </body>
 
