@@ -104,8 +104,11 @@
                 } else {
                     if (/\A-Z/.test(pw.value)) {
 
+                        return true;
                     }
-                    return true;
+
+                    e.preventDefault();
+                    alert('비번에 영어대문자를 1개이상 입력하시오');
                 }
             }
         });
